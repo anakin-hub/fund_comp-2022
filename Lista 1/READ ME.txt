@@ -1,0 +1,15 @@
+1- GLSL Seria a linguagem na qual os Shaders seriam escritos, semelhante ao C. Dois tipos obrigátorios seriam o vertex shader e o fragment shader. 
+O vertex Shader seria o segundo passo do nosso Pipeline, responsável por posicionar os vértices nas coordenadas finais. 
+Já o Fragment shader é a penúltima etapa do nosso pipelane,responsável em determinar a cor de cada fragmento.
+
+2- Primitivas gráficas são comandos e funções que alteram os elementos gráficos de uma imagem.
+
+3- VBO(Vertex Buffer Objects): é um buffer que envia dados de forma mais "crua" para a GPU(posição,vetores,cores etc). 
+Enviando os dados de uma só vez, não sendo necessário enviar para cada vértice.
+   VAO(Vertex Aray Objects): Realiza a ligação dos atributos de um vértice, de certa forma, armazena e organiza os VBOS.
+
+5- O exercicio esta dividido no código, necessitando apenas comentar e descomentar as chamadas de desenho, onde todos descomentados seria a 5d e as questoes
+5a, 5b e 5c tem suas linhas proprias sendo necessario deixar só elas descomentadas.
+
+6- No while e no momento de geração de buffer é necessario deixar apenas a questao desejada descomentada para rodar.
+

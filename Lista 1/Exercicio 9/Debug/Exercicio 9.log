@@ -1,0 +1,3 @@
+﻿  Source.cpp
+D:\Studying\Repositórios - GitHub\FCG2022-1\Lista 1\Exercicio 9\Source.cpp(194,2): warning C4305: 'inicializando': truncamento de 'double' para 'GLfloat'
+  Exercicio 9.vcxproj -> D:\Studying\Repositórios - GitHub\FCG2022-1\Lista 1\Debug\Exercicio 9.exe

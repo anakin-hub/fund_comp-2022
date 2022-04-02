@@ -1,0 +1,7 @@
+﻿  glad.c
+  Shader.cpp
+  Source.cpp
+D:\Studying\Repositórios - GitHub\FCG2022-1\Lista 1\Exercicio 5\Source.cpp(161,2): warning C4305: 'inicializando': truncamento de 'double' para 'GLfloat'
+  Gerando Código...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflita com uso de outras bibliotecas; use /NODEFAULTLIB:library
+  Exercicio 5.vcxproj -> D:\Studying\Repositórios - GitHub\FCG2022-1\Lista 1\Debug\Exercicio 5.exe

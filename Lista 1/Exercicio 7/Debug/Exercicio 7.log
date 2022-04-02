@@ -1,0 +1,4 @@
+﻿  Source.cpp
+D:\Studying\Repositórios - GitHub\FCG2022-1\Lista 1\Exercicio 7\Source.cpp(32,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+D:\Studying\Repositórios - GitHub\FCG2022-1\Lista 1\Exercicio 7\Source.cpp(230,18): warning C4305: '+=': truncamento de 'double' para 'float'
+  Exercicio 7.vcxproj -> D:\Studying\Repositórios - GitHub\FCG2022-1\Lista 1\Debug\Exercicio 7.exe
