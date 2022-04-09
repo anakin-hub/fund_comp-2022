@@ -1,0 +1,3 @@
+﻿  Source.cpp
+D:\Studying\Repositórios - GitHub\FCG2022-1\HelloTriangle - ClassShaders\HelloTriangle\Source.cpp(37,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+  HelloTriangle.vcxproj -> D:\Studying\Repositórios - GitHub\FCG2022-1\HelloTriangle - ClassShaders\Debug\HelloTriangle.exe
