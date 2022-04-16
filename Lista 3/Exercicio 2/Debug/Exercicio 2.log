@@ -1,0 +1,4 @@
+﻿  Source.cpp
+D:\Studying\Projects - Visual Studio\HelloTriangle - ClassShaders\Exercicio 2\Source.cpp(38,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\HelloTriangle - ClassShaders\Exercicio 2\Source.cpp(70,22): warning C4244: 'argumento': conversão de 'ULONGLONG' para 'unsigned int', possível perda de dados
+  Exercicio 2.vcxproj -> D:\Studying\Projects - Visual Studio\HelloTriangle - ClassShaders\Debug\Exercicio 2.exe
