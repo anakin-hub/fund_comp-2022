@@ -1,0 +1,7 @@
+﻿  Source.cpp
+D:\Studying\Projects - Visual Studio\Lista 3\Exercicio 3\Source.cpp(38,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\Lista 3\Exercicio 3\Source.cpp(140,15): warning C4305: '+=': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\Lista 3\Exercicio 3\Source.cpp(143,16): warning C4305: '+=': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\Lista 3\Exercicio 3\Source.cpp(146,16): warning C4305: '+=': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\Lista 3\Exercicio 3\Source.cpp(149,15): warning C4305: '+=': truncamento de 'double' para 'float'
+  Exercicio 3.vcxproj -> D:\Studying\Projects - Visual Studio\Lista 3\Debug\Exercicio 3.exe
