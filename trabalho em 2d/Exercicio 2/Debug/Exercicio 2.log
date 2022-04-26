@@ -1,4 +1,10 @@
 ﻿  Source.cpp
-D:\Studying\Projects - Visual Studio\Lista 3\Exercicio 2\Source.cpp(38,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
-D:\Studying\Projects - Visual Studio\Lista 3\Exercicio 2\Source.cpp(70,22): warning C4244: 'argumento': conversão de 'ULONGLONG' para 'unsigned int', possível perda de dados
-  Exercicio 2.vcxproj -> D:\Studying\Projects - Visual Studio\Lista 3\Debug\Exercicio 2.exe
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 2\Source.cpp(38,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 2\Source.cpp(74,22): warning C4244: 'argumento': conversão de 'ULONGLONG' para 'unsigned int', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 2\Source.cpp(132,29): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 2\Source.cpp(299,22): warning C4244: '=': conversão de 'int' para 'GLfloat', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 2\Source.cpp(302,13): warning C4244: 'inicializando': conversão de 'GLfloat' para 'int', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 2\Source.cpp(315,14): warning C4305: '=': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 2\Source.cpp(335,13): warning C4305: '=': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 2\Source.cpp(336,13): warning C4305: '=': truncamento de 'double' para 'float'
+  Exercicio 2.vcxproj -> D:\Studying\Projects - Visual Studio\trabalho em 2d\Debug\Exercicio 2.exe

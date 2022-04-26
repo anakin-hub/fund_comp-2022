@@ -1,4 +1,1 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: O diretório intermediário (Debug\) contém arquivos compartilhados de outro projeto (HelloTriangle.vcxproj). Isso pode levar a um comportamento incorreto de limpeza e recompilação.
-  Source.cpp
-D:\Studying\Projects - Visual Studio\HelloTriangle - ClassShaders\HelloTriangle\Source.cpp(37,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
-  HelloTriangle.vcxproj -> D:\Studying\Projects - Visual Studio\HelloTriangle - ClassShaders\Debug\Exercicio 1.exe
+﻿

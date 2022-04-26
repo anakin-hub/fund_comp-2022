@@ -37,11 +37,15 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 //Constantes
 const float Pi = 3.14159;
 int moveID = 0;
+int colorID = -1;
+float r, g, b = 0.0;
+bool Pressed = false, moving = false;
+//GLfloat matriz[10][10][10];
 
 // Protótipos das funções
 int setupGeometry();
 int createCircle(float radius, int nPoints);
-int setupMatrix();
+void setupMatrix();
 void drawRotating(Shader s);
 void randomColor(GLint cl);
 
@@ -110,7 +114,7 @@ int main()
 	glUseProgram(shader.ID);
 
 	glm::mat4 projection = glm::mat4(1); //matriz identidade
-	projection = glm::ortho(-3.0, 3.0, -3.0, 3.0, -1.0, 1.0);
+	projection = glm::ortho(-6.0, 6.0, -6.0, 6.0, -1.0, 1.0);
 
 	GLint projLoc = glGetUniformLocation(shader.ID, "projection");
 	glUniformMatrix4fv(projLoc, 1, FALSE, glm::value_ptr(projection));
@@ -124,87 +128,238 @@ int main()
 	//GLint modelLoc = glGetUniformLocation(shader.ID, "model");
 	//glUniformMatrix4fv(modelLoc, 1, FALSE, glm::value_ptr(model));
 
-	
-	float posx = -2.5, posy = 2.5; //posição inicial //pergunta pq o ponto inicial da tela é 1 a menos q o valor da tela?
+	float offset = 4.5;
+	float posx = -offset, posy = 1.0+offset; //posição inicial //pergunta pq o ponto inicial da tela é 1 a menos q o valor da tela?
 
 	//Limpa o buffer de cor
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f); //cor de fundo
+	glClearColor(0.3f, 0.3f, 0.3f, 1.0f); //cor de fundo
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	glLineWidth(5);
 	glPointSize(15);
 
 	//glUniform4f(colorLoc, 1.0f, 1.0f, 0.0f, 1.0f);
-	glBindVertexArray(VAO);
+	//glBindVertexArray(VAO);
 
-	for (int y = 0; y < 6; y++)
+	//for (int y = 0; y < 1; y++)
+	//{
+	//	for (int x = 0; x < 10; x++)
+	//	{
+	//		/*if(x == 1)
+	//		randomColor(colorLoc);
+	//		else*/
+	//		if (x < 9)
+	//		{
+	//			colorID = x+1;
+	//		}
+	//		else
+	//		{
+	//			colorID = 0;
+	//		}
+
+
+	//		switch (colorID)
+	//		{
+	//		case 1:
+	//			r = 1.0;
+	//			g = b = 0.0;
+	//			break;
+	//		case 2:
+	//			r = 1.0;
+	//			g = 0.65;
+	//			b = 0.0;
+	//			break;
+	//		case 3:
+	//			r = g = 1.0;
+	//			b = 0.0;
+	//			break;
+	//		case 4:
+	//			r = b = 0.0;
+	//			g = 1.0;
+	//			break;
+	//		case 5:
+	//			b = g = 1.0;
+	//			r = 0.0;
+	//			break;
+	//		case 6:
+	//			r = g = 0.0;
+	//			b = 1.0;
+	//			break;
+	//		case 7:
+	//			r = 0.6;
+	//			g = 0.2;
+	//			b = 1.0;
+	//			break;
+	//		case 8:
+	//			r = b = 1.0;
+	//			g = 0.0;
+	//			break;
+	//		case 9:
+	//			r = g = b = 0.0;
+	//			break;
+	//		case 0:
+	//			r = g = b = 1.0;
+	//			break;
+	//		}
+	//		glUniform4f(colorLoc,r, g, b, 1.0f);
+	//		
+	//		glm::mat4 model = glm::mat4(1);
+	//		model = glm::translate(model, glm::vec3(posx, posy, 0.0));
+	//		GLint modelLoc = glGetUniformLocation(shader.ID, "model");
+	//		glUniformMatrix4fv(modelLoc, 1, FALSE, glm::value_ptr(model));
+	//		
+
+	//		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+	//		
+	//		posx += 1.0;//contagem da linha
+	//	}
+	//	posy += -1.0;//contagem da coluna
+	//	posx = -offset; //reset da linha
+	//}
+
+	GLfloat matriz[10][10];
+	for (int x = 0; x < 10; x++)
 	{
-		for (int x = 0; x < 6; x++)
-		{
-			glUniform4f(colorLoc, 1.0, 1.0, 1.0, 1.0f);
-			glDrawArrays(GL_LINE_STRIP, 2, 4);
-
-			/*if(x == 1)
-			randomColor(colorLoc);
-			else*/
-			glUniform4f(colorLoc, 0.0, 0.0, 0.0, 1.0f);
-
-			glm::mat4 model = glm::mat4(1);
-			model = glm::translate(model, glm::vec3(posx, posy, 0.0));
-			GLint modelLoc = glGetUniformLocation(shader.ID, "model");
-			glUniformMatrix4fv(modelLoc, 1, FALSE, glm::value_ptr(model));
-			glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-			
-			posx += 1.0;//contagem da linha
+		for (int y = 0; y < 10; y++)
+		{			
+			matriz[x][y] = -1;
 		}
-		posy += -1.0;//contagem da coluna
-		posx = -2.5; //reset da linha
 	}
 
 	//posy = posx = 0.0;
+	int Sx = 0, Sy = 0;
+	
 	glfwSwapBuffers(window);
 	// Loop da aplicação - "game loop"
 	while (!glfwWindowShouldClose(window))
 	{
 		glfwPollEvents();
+		posx = -offset, posy = -1 + offset;
 
-		//switch (moveID)
-		//{
-		//case 0:
+		glClearColor(0.3f, 0.3f, 0.3f, 1.0f); //cor de fundo
+		glClear(GL_COLOR_BUFFER_BIT);
 
-		//	break;
-		//case 1:
-		//	posy += 1.0;
-		//	break;
-		//case 2:
-		//	posy += -1.0;
-		//	break;
-		//case 3:
-		//	posx += -1.0;
-		//	break;
-		//case 4:
-		//	posx += 1.0;
-		//	break;
-		//}
+		glLineWidth(5);
+		glPointSize(15);
 
-		//// Limpa o buffer de cor
-		//glClearColor(0.0f, 0.0f, 0.0f, 1.0f); //cor de fundo
-		//glClear(GL_COLOR_BUFFER_BIT);
+		glBindVertexArray(VAO);
 
-		//glLineWidth(5);
-		//glPointSize(15);
+		switch (moveID)
+		{
+		case 0:
+			moving = false;
+			break;
+		case 1:
+			if (!moving)
+			{
+				Sy += -1;
+				moving = true;
+			}
+			break;
+		case 2:
+			if (!moving)
+			{
+				Sy += 1;
+				moving = true;
+			}
+			break;
+		case 3:
+			if (!moving)
+			{
+				Sx += -1;
+				moving = true;
+			}
+			break;
+		case 4:
+			if (!moving)
+			{
+				Sx += 1;
+				moving = true;
+			}
+			break;
+		}
 
-		//glUniform4f(colorLoc, 1.0f, 0.0f, 0.5f, 1.0f);
-		//glBindVertexArray(VAO);
+		for (int y = 0; y < 10; y++)
+		{
+			for (int x = 0; x < 10; x++)
+			{
+				glm::mat4 model = glm::mat4(1);
+				model = glm::translate(model, glm::vec3(posx, posy, 0.0));
+				GLint modelLoc = glGetUniformLocation(shader.ID, "model");
+				glUniformMatrix4fv(modelLoc, 1, FALSE, glm::value_ptr(model));
 
-		//glm::mat4 model = glm::mat4(1);
-		//model = glm::translate(model, glm::vec3(posx, posy, 0.0));
-		//GLint modelLoc = glGetUniformLocation(shader.ID, "model");
-		//glUniformMatrix4fv(modelLoc, 1, FALSE, glm::value_ptr(model));
-		//glDrawArrays(GL_LINE_LOOP, 2, 4);
+				if (Sx == x && Sy == y)
+				{
+					//quadrado de seleção
+					glUniform4f(colorLoc, 0.0, 0.0, 0.0, 1.0f);
+					glDrawArrays(GL_LINE_LOOP, 2, 4);
+					if (Pressed)
+					{
+						Pressed = false;
+						matriz[x][y] = colorID;
+					}
+				}
+				int cor = matriz[x][y];
 
-		//glBindVertexArray(0);
-		//glfwSwapBuffers(window);
+				switch (cor)
+				{
+				case 0:
+					r = g = b = 1.0;
+					break;
+				case 1:
+					r = 1.0;
+					g = b = 0.0;
+					break;
+				case 2:
+					r = 1.0;
+					g = 0.65;
+					b = 0.0;
+					break;
+				case 3:
+					r = g = 1.0;
+					b = 0.0;
+					break;
+				case 4:
+					r = b = 0.0;
+					g = 1.0;
+					break;
+				case 5:
+					b = g = 1.0;
+					r = 0.0;
+					break;
+				case 6:
+					r = g = 0.0;
+					b = 1.0;
+					break;
+				case 7:
+					r = 0.6;
+					g = 0.2;
+					b = 1.0;
+					break;
+				case 8:
+					r = b = 1.0;
+					g = 0.0;
+					break;
+				case 9:
+					r = g = b = 0.0;
+					break;
+				}
+
+				if (matriz[x][y] != -1)
+				{
+					glUniform4f(colorLoc, r, g, b, 1.0f);
+					glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+				}
+								
+
+				posx += 1.0;//contagem da linha
+			}
+			posy += -1.0;//contagem da coluna
+			posx = -offset; //reset da linha
+		}
+
+		glBindVertexArray(0);
+		glfwSwapBuffers(window);
 	}
 	// Pede pra OpenGL desalocar os buffers
 	glDeleteVertexArrays(1, &VAO);
@@ -240,6 +395,62 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 	else
 	{
 		moveID = 0;
+	}
+
+	if (key == GLFW_KEY_1 && action == GLFW_PRESS)
+	{
+		colorID = 1; //VERMELHO
+		Pressed = true;
+	}
+	else if(key == GLFW_KEY_2 && action == GLFW_PRESS)
+	{
+		colorID = 2; //LARANJA
+		Pressed = true;
+	}
+	else if(key == GLFW_KEY_3 && action == GLFW_PRESS)
+	{
+		colorID = 3; //AMARELO
+		Pressed = true;
+	}
+	else if (key == GLFW_KEY_4 && action == GLFW_PRESS)
+	{
+		colorID = 4; //VERDE
+		Pressed = true;
+	}
+	else if (key == GLFW_KEY_5 && action == GLFW_PRESS)
+	{
+		colorID = 5; //AZUL
+		Pressed = true;
+	}
+	else if (key == GLFW_KEY_6 && action == GLFW_PRESS)
+	{
+		colorID = 6; //AZUL ESCURO
+		Pressed = true;
+	}
+	else if (key == GLFW_KEY_7 && action == GLFW_PRESS)
+	{
+		colorID = 7; //VIOLETA (ROXO)
+		Pressed = true;
+	}
+	else if (key == GLFW_KEY_8 && action == GLFW_PRESS)
+	{
+		colorID = 8; //ROSA
+		Pressed = true;
+	}
+	else if (key == GLFW_KEY_9 && action == GLFW_PRESS)
+	{
+		colorID = 9; //PRETO
+		Pressed = true;
+	}
+	else if (key == GLFW_KEY_0 && action == GLFW_PRESS)
+	{
+		colorID = 0; //BRANCO
+		Pressed = true;
+	}
+	else if (key == GLFW_KEY_SPACE && action == GLFW_PRESS)
+	{
+		colorID = -1; //APAGAR
+		Pressed = true;
 	}
 }
 
@@ -360,52 +571,19 @@ int createCircle(float radius, int nPoints)
 	return VAO;
 }
 
-int setupMatrix()
+void setupMatrix()
 {
-	GLfloat vertices[10][10][10];
+	GLfloat matriz[10][10][10];
 	for (int x = 0; x < 10; x++)
 	{
 		for (int y = 0; y < 10; y++)
 		{
 			for (int z = 0; z < 10; z++)
 			{
-				vertices[x][y][z] = -1;
+				matriz[x][y][z] = -1;
 			}
 		}
 	}
-
-	GLuint VBO, VAO;
-
-	//Geração do identificador do VBO
-	glGenBuffers(1, &VBO);
-	//Faz a conexão (vincula) do buffer como um buffer de array
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	//Envia os dados do array de floats para o buffer da OpenGl
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
-	//Geração do identificador do VAO (Vertex Array Object)
-	glGenVertexArrays(1, &VAO);
-	// Vincula (bind) o VAO primeiro, e em seguida  conecta e seta o(s) buffer(s) de vértices
-	// e os ponteiros para os atributos 
-	glBindVertexArray(VAO);
-	//Para cada atributo do vertice, criamos um "AttribPointer" (ponteiro para o atributo), indicando: 
-	// Localização no shader * (a localização dos atributos devem ser correspondentes no layout especificado no vertex shader)
-	// Numero de valores que o atributo tem (por ex, 3 coordenadas xyz) 
-	// Tipo do dado
-	// Se está normalizado (entre zero e um)
-	// Tamanho em bytes 
-	// Deslocamento a partir do byte zero 
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
-	glEnableVertexAttribArray(0);
-
-	// Observe que isso é permitido, a chamada para glVertexAttribPointer registrou o VBO como o objeto de buffer de vértice 
-	// atualmente vinculado - para que depois possamos desvincular com segurança
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-	// Desvincula o VAO (é uma boa prática desvincular qualquer buffer ou array para evitar bugs medonhos)
-	glBindVertexArray(0);
-
-	return VAO;
 }
 
 void drawRotating(Shader s)
