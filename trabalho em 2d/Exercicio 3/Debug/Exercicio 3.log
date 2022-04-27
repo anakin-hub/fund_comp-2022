@@ -1,1 +1,14 @@
-﻿
+﻿  Source.cpp
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 3\Source.cpp(21,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 3\Source.cpp(187,13): error C2374: 'model': redefinição; várias inicializações
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 3\Source.cpp(175): message : consulte a declaração de 'model'
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 3\Source.cpp(191,9): error C2374: 'modelLoc': redefinição; várias inicializações
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 3\Source.cpp(179): message : consulte a declaração de 'modelLoc'
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 3\Source.cpp(487,2): warning C4305: 'inicializando': truncamento de 'double' para 'GLfloat'
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 3\Source.cpp(544,11): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 3\Source.cpp(545,11): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 3\Source.cpp(549,16): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 3\Source.cpp(550,16): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 3\Source.cpp(551,10): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 3\Source.cpp(552,10): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\Exercicio 3\Source.cpp(554,26): warning C4305: 'inicializando': truncamento de 'double' para 'float'

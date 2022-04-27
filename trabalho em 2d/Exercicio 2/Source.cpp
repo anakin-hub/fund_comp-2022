@@ -132,11 +132,11 @@ int main()
 	float posx = -offset, posy = 1.0+offset; //posição inicial //pergunta pq o ponto inicial da tela é 1 a menos q o valor da tela?
 
 	//Limpa o buffer de cor
-	glClearColor(0.3f, 0.3f, 0.3f, 1.0f); //cor de fundo
-	glClear(GL_COLOR_BUFFER_BIT);
+	//glClearColor(0.3f, 0.3f, 0.3f, 1.0f); //cor de fundo
+	//glClear(GL_COLOR_BUFFER_BIT);
 
-	glLineWidth(5);
-	glPointSize(15);
+	//glLineWidth(5);
+	//glPointSize(15);
 
 	//glUniform4f(colorLoc, 1.0f, 1.0f, 0.0f, 1.0f);
 	//glBindVertexArray(VAO);
@@ -216,6 +216,7 @@ int main()
 	//	posy += -1.0;//contagem da coluna
 	//	posx = -offset; //reset da linha
 	//}
+	//posy = posx = 0.0;
 
 	GLfloat matriz[10][10];
 	for (int x = 0; x < 10; x++)
@@ -225,8 +226,6 @@ int main()
 			matriz[x][y] = -1;
 		}
 	}
-
-	//posy = posx = 0.0;
 	int Sx = 0, Sy = 0;
 	
 	glfwSwapBuffers(window);
@@ -236,7 +235,7 @@ int main()
 		glfwPollEvents();
 		posx = -offset, posy = -1 + offset;
 
-		glClearColor(0.3f, 0.3f, 0.3f, 1.0f); //cor de fundo
+		glClearColor(0.87f, 0.87f, 0.87f, 1.0f); //cor de fundo
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		glLineWidth(5);
