@@ -134,6 +134,7 @@ int main()
 	int Sx = 0, Sy = 0, Sz = 0;
 	float offset = 4;
 	float posx = 0, posy = 0, posz = 0;
+
 	// Loop da aplicação - "game loop"
 	while (!glfwWindowShouldClose(window))
 	{
@@ -210,42 +211,48 @@ int main()
 		case 1:
 			if (!moving)
 			{
-				Sz += -1;
+				if (Sz - 1 > 0)
+					Sz += -1;
 				moving = true;
 			}
 			break;
 		case 2:
 			if (!moving)
 			{
-				Sz += 1;
+				if(Sz+1 < 10)
+					Sz += 1;
 				moving = true;
 			}
 			break;
 		case 3:
 			if (!moving)
 			{
-				Sx += -1;
+				if (Sx - 1 > 0)
+					Sx += -1;
 				moving = true;
 			}
 			break;
 		case 4:
 			if (!moving)
 			{
-				Sx += 1;
+				if (Sx + 1 < 10)
+					Sx += 1;
 				moving = true;
 			}
 			break;
 		case 5:
 			if (!moving)
 			{
-				Sy += -1;
+				if (Sy - 1 > 0)
+					Sy += -1;
 				moving = true;
 			}
 			break;
 		case 6:
 			if (!moving)
 			{
-				Sy += 1;
+				if (Sy + 1 < 10)
+					Sy += 1;
 				moving = true;
 			}
 			break;
@@ -271,7 +278,6 @@ int main()
 						{
 							Pressed = false;
 							matriz[x][y][z] = colorID;
-							cout << posx << "\t" << posy << "\t" << posz << endl;
 						}
 					}
 					int cor = matriz[x][y][z];
@@ -398,11 +404,11 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 	}
 	else if (key == GLFW_KEY_R && action == GLFW_PRESS)
 	{
-		moveID = 5; //ESQUERDA
+		moveID = 5; //CIMA
 	}
 	else if (key == GLFW_KEY_F && action == GLFW_PRESS)
 	{
-		moveID = 6; //DIREITA
+		moveID = 6; //BAIXO
 	}
 	else
 	{

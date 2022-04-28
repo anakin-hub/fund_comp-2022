@@ -1,18 +1,18 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: O diretório intermediário (Debug\) contém arquivos compartilhados de outro projeto (HelloTriangle.vcxproj). Isso pode levar a um comportamento incorreto de limpeza e recompilação.
   Source.cpp
 D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(21,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
-D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(151,38): warning C4305: 'argumento': truncamento de 'double' para 'GLfloat'
-D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(273,26): warning C4244: '=': conversão de 'int' para 'GLfloat', possível perda de dados
-D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(277,14): warning C4244: 'inicializando': conversão de 'GLfloat' para 'int', possível perda de dados
-D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(290,15): warning C4305: '=': truncamento de 'double' para 'float'
-D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(310,14): warning C4305: '=': truncamento de 'double' para 'float'
-D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(311,14): warning C4305: '=': truncamento de 'double' para 'float'
-D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(698,2): warning C4305: 'inicializando': truncamento de 'double' para 'GLfloat'
-D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(827,11): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
-D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(828,11): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
-D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(832,16): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(833,16): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(834,10): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
-D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(835,10): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
-D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(837,26): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(152,38): warning C4305: 'argumento': truncamento de 'double' para 'GLfloat'
+D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(276,26): warning C4244: '=': conversão de 'int' para 'GLfloat', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(279,14): warning C4244: 'inicializando': conversão de 'GLfloat' para 'int', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(292,15): warning C4305: '=': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(312,14): warning C4305: '=': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(313,14): warning C4305: '=': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(700,2): warning C4305: 'inicializando': truncamento de 'double' para 'GLfloat'
+D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(829,11): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(830,11): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(834,16): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(835,16): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(836,10): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(837,10): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\trabalho em 2d\HelloTriangle\Source.cpp(839,26): warning C4305: 'inicializando': truncamento de 'double' para 'float'
   HelloTriangle.vcxproj -> D:\Studying\Projects - Visual Studio\trabalho em 2d\Debug\Exercicio 1.exe
