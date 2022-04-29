@@ -1,0 +1,18 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: O diretório intermediário (Debug\) contém arquivos compartilhados de outro projeto (HelloTriangle.vcxproj). Isso pode levar a um comportamento incorreto de limpeza e recompilação.
+  Source.cpp
+D:\Studying\Projects - Visual Studio\VoxelEditor\HelloTriangle\Source.cpp(21,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\VoxelEditor\HelloTriangle\Source.cpp(154,38): warning C4305: 'argumento': truncamento de 'double' para 'GLfloat'
+D:\Studying\Projects - Visual Studio\VoxelEditor\HelloTriangle\Source.cpp(296,26): warning C4244: '=': conversão de 'int' para 'GLfloat', possível perda de dados
+D:\Studying\Projects - Visual Studio\VoxelEditor\HelloTriangle\Source.cpp(300,14): warning C4244: 'inicializando': conversão de 'GLfloat' para 'int', possível perda de dados
+D:\Studying\Projects - Visual Studio\VoxelEditor\HelloTriangle\Source.cpp(313,15): warning C4305: '=': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\VoxelEditor\HelloTriangle\Source.cpp(333,14): warning C4305: '=': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\VoxelEditor\HelloTriangle\Source.cpp(334,14): warning C4305: '=': truncamento de 'double' para 'float'
+D:\Studying\Projects - Visual Studio\VoxelEditor\HelloTriangle\Source.cpp(640,11): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\VoxelEditor\HelloTriangle\Source.cpp(641,11): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\VoxelEditor\HelloTriangle\Source.cpp(645,16): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\VoxelEditor\HelloTriangle\Source.cpp(646,16): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\VoxelEditor\HelloTriangle\Source.cpp(647,10): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\VoxelEditor\HelloTriangle\Source.cpp(648,10): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Projects - Visual Studio\VoxelEditor\HelloTriangle\Source.cpp(650,26): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflita com uso de outras bibliotecas; use /NODEFAULTLIB:library
+  HelloTriangle.vcxproj -> D:\Studying\Projects - Visual Studio\VoxelEditor\Debug\Exercicio 1.exe

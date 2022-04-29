@@ -118,7 +118,7 @@ int main()
 	//Habilita teste de profundidade
 	glEnable(GL_DEPTH_TEST);
 
-
+	
 
 	GLfloat matriz[10][10][10];
 	for (int x = 0; x < 10; x++)
@@ -192,7 +192,21 @@ int main()
 
 		view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
 		shader.setMat4("view", glm::value_ptr(view));
+		
+		
+		/*glm::mat4 model = glm::mat4(1);
+		model = glm::scale(model, glm::vec3(1.0, 1.0, 1.0));
+		model = glm::translate(model, glm::vec3(0.5, -0.5, 0.0));
+		GLint modelLoc = glGetUniformLocation(shader.ID, "model");
+		glUniformMatrix4fv(modelLoc, 1, FALSE, glm::value_ptr(model));
 
+		glUniform4f(colorLoc, 0.0, 0.0, 0.0, 1.0f);
+		glBindVertexArray(VAO);
+		glDrawArrays(GL_LINE_LOOP, 40, 4);
+		glDrawArrays(GL_LINE_LOOP, 44, 4);
+		glDrawArrays(GL_LINES, 48, 8);*/
+
+		
 
 		glm::mat4 model = glm::mat4(1);
 		model = glm::scale(model, glm::vec3(0.1, 0.1, 0.1));
@@ -200,8 +214,7 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, FALSE, glm::value_ptr(model));
 
 		glBindVertexArray(VAO);
-		//glDrawArrays(GL_TRIANGLE_STRIP, 0, 24);
-		
+
 		posx = -offset, posy = offset, posz = -offset*4;
 		switch (moveID)
 		{
@@ -211,7 +224,7 @@ int main()
 		case 1:
 			if (!moving)
 			{
-				if (Sz - 1 > 0)
+				if (Sz - 1 > -1)
 					Sz += -1;
 				moving = true;
 			}
@@ -227,7 +240,7 @@ int main()
 		case 3:
 			if (!moving)
 			{
-				if (Sx - 1 > 0)
+				if (Sx - 1 > -1)
 					Sx += -1;
 				moving = true;
 			}
@@ -243,7 +256,7 @@ int main()
 		case 5:
 			if (!moving)
 			{
-				if (Sy - 1 > 0)
+				if (Sy - 1 > -1)
 					Sy += -1;
 				moving = true;
 			}
@@ -273,11 +286,14 @@ int main()
 					{
 						//quadrado de seleção
 						glUniform4f(colorLoc, 0.0, 0.0, 0.0, 1.0f);
-						glDrawArrays(GL_LINE_LOOP, 2, 4);
+						glDrawArrays(GL_LINE_LOOP, 24, 4);
+						glDrawArrays(GL_LINE_LOOP, 28, 4);
+						glDrawArrays(GL_LINES, 32, 8);
 						if (Pressed)
 						{
 							Pressed = false;
 							matriz[x][y][z] = colorID;
+							cout << posx << "," << posy << "," << posz << endl;
 						}
 					}
 					int cor = matriz[x][y][z];
@@ -776,6 +792,52 @@ int setupCube()
 		 0.5,-0.5, 0.5,
 		 0.5,-0.5,-0.5,
 		//parte inferior
+		//CUBO SELEÇÃO
+		-0.5,-0.5, 0.5,
+		 0.5,-0.5, 0.5,
+		 0.5, 0.5, 0.5,
+		-0.5, 0.5, 0.5,
+		//frontal
+		-0.5, 0.5,-0.5,
+		 0.5, 0.5,-0.5,
+		 0.5,-0.5,-0.5,
+		-0.5,-0.5,-0.5,		 
+		//Trás
+		-0.5,-0.5,-0.5,
+		-0.5,-0.5, 0.5,
+		//linha esq inf
+		-0.5, 0.5,-0.5,
+		-0.5, 0.5, 0.5,
+		//linha esq sup
+		 0.5, 0.5,-0.5,
+		 0.5, 0.5, 0.5,
+		//linha dir sup
+		 0.5,-0.5,-0.5,
+		 0.5,-0.5, 0.5,
+		//linha dir inf
+		//CUBO VOXEL AREA
+		-5.0, 5.0,-16.5,
+		 5.0, 5.0,-16.5,
+		 5.0,-5.0,-16.5,
+		-5.0,-5.0,-16.5,
+		//trás
+		-5.0, 5.0,-6.5,
+		 5.0, 5.0,-6.5,
+		 5.0,-5.0,-6.5,
+		-5.0,-5.0,-6.5,
+		//frente
+		-5.0, 5.0,-16.5,
+		-5.0, 5.0,-6.5,
+		//linha esq sup
+		 5.0, 5.0,-16.5,
+		 5.0, 5.0,-6.5,
+		//linha dir sup
+		 5.0,-5.0,-16.5,
+		 5.0,-5.0,-6.5,
+		//linha dir inf
+		-5.0,-5.0,-16.5,
+		-5.0,-5.0,-6.5,
+		//linha esq inf
 	};
 	GLuint VBO, VAO;
 	//Geração do identificador do VBO
