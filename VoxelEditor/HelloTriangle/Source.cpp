@@ -24,6 +24,7 @@ int colorID = -1;
 float r, g, b = 0.0;
 bool Pressed = false, moving = false;
 
+
 // Protótipo da função de callback de teclado
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
@@ -31,6 +32,10 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 // Protótipos das funções
 int setupCube();
 void updateCameraPos(GLFWwindow* window);
+
+//funções para carregar & salvar arquivo
+void saveDraw();
+void loadDraw();
 
 // Dimensões da janela (pode ser alterado em tempo de execução)
 const GLuint WIDTH = 600, HEIGHT = 600;
@@ -487,6 +492,16 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 		colorID = -1; //APAGAR
 		Pressed = true;
 	}
+	
+	if (key == GLFW_KEY_C && action == GLFW_PRESS)
+	{
+		//SALVAR ARQUIVO
+	}
+
+	if (key == GLFW_KEY_V && action == GLFW_PRESS)
+	{
+		//CARREGAR ARQUIVO
+	}
 }
 
 // Esta função está bastante harcoded - objetivo é criar os buffers que armazenam a 
@@ -630,6 +645,14 @@ void updateCameraPos(GLFWwindow* window)
 
 	if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
 		cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+}
+
+void saveDraw()
+{
+}
+
+void loadDraw()
+{
 }
 
 //Função para controle da posição do mouse e contrle da câmera pelo mesmo
