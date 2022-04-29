@@ -1,2 +1,0 @@
-﻿  glad.c
-D:\Studying\Repositórios - GitHub\FCG2022-1\HelloTriangle\HelloTriangle\glad.c(24,10): fatal error C1083: Não é possível abrir arquivo incluir: 'glad/glad.h': No such file or directory

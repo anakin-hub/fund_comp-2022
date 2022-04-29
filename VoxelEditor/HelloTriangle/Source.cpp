@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <assert.h>
+#include <fstream>
 
 using namespace std;
 
@@ -18,12 +19,11 @@ using namespace std;
 
 #include <cmath> //biblioteca matematica do C++
 
-const float Pi = 3.14159;
 int moveID = 0;
 int colorID = -1;
 float r, g, b = 0.0;
 bool Pressed = false, moving = false;
-
+fstream txtFile;
 
 // Protótipo da função de callback de teclado
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
@@ -49,7 +49,8 @@ bool firstMouse = true;
 float lastX = WIDTH / 2.0, lastY = HEIGHT / 2.0; //para calcular o quanto que o mouse deslocou
 float yaw = -90.0, pitch = 0.0; //rotação em x e y
 
-
+//Criação da matriz que controlará a posição dos voxels
+GLfloat matriz[10][10][10];
 
 // Função MAIN
 int main()
@@ -125,7 +126,6 @@ int main()
 	glUniformMatrix4fv(modelLoc, 1, FALSE, glm::value_ptr(model));
 	
 	//Configura a matriz para que nenhum voxel tenha cor, fazendo eles não serem desenhados
-	GLfloat matriz[10][10][10];
 	for (int x = 0; x < 10; x++)
 	{
 		for (int y = 0; y < 10; y++)
@@ -496,11 +496,13 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 	if (key == GLFW_KEY_C && action == GLFW_PRESS)
 	{
 		//SALVAR ARQUIVO
+		saveDraw();
 	}
 
 	if (key == GLFW_KEY_V && action == GLFW_PRESS)
 	{
 		//CARREGAR ARQUIVO
+		loadDraw();
 	}
 }
 
@@ -649,10 +651,41 @@ void updateCameraPos(GLFWwindow* window)
 
 void saveDraw()
 {
+	txtFile.open("matriz.txt");
+	if (txtFile.is_open())
+	{
+		for (int i = 0; i < 10; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+				for (int k = 0; k < 10; k++)
+				{
+					txtFile << matriz[i][j][k] << " ";
+				}
+				txtFile << endl;
+			}
+		}
+		txtFile.close();
+	}
 }
 
 void loadDraw()
 {
+	txtFile.open("matriz.txt");
+	if (txtFile.is_open())
+	{
+		for (int i = 0; i < 10; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+				for (int k = 0; k < 10; k++)
+				{
+					txtFile >> matriz[i][j][k];
+				}
+			}
+		}
+		txtFile.close();
+	}
 }
 
 //Função para controle da posição do mouse e contrle da câmera pelo mesmo
