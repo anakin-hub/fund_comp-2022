@@ -58,20 +58,6 @@ int main()
 	// Inicialização da GLFW
 	glfwInit();
 
-	//Muita atenção aqui: alguns ambientes não aceitam essas configurações
-	//Você deve adaptar para a versão do OpenGL suportada por sua placa
-	//Sugestão: comente essas linhas de código para desobrir a versão e
-	//depois atualize (por exemplo: 4.5 com 4 e 5)
-	/*glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);*/
-
-	//Essencial para computadores da Apple
-//#ifdef __APPLE__
-//	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-//#endif
-
-
 	// Criação da janela GLFW
 	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "VOXEL EDITOR 10X10X10 - ANAKIN, BRENDA & EDUARDO", nullptr, nullptr);
 	glfwMakeContextCurrent(window);
@@ -361,7 +347,7 @@ int main()
 				posz += 1.0;//contagem do z
 			}
 			posz = -offset*4;//reset do z
-			posy += -1.0;//contagem da coluna
+			posy += -1.0;//contagem da y
 		}
 
 		glBindVertexArray(0);

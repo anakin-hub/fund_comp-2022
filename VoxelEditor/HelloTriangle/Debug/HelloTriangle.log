@@ -1,17 +1,16 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: O diretório intermediário (Debug\) contém arquivos compartilhados de outro projeto (Exercicio 1.vcxproj, HelloTriangle.vcxproj). Isso pode levar a um comportamento incorreto de limpeza e recompilação.
   Source.cpp
-D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(159,38): warning C4305: 'argumento': truncamento de 'double' para 'GLfloat'
-D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(301,26): warning C4244: '=': conversão de 'int' para 'GLfloat', possível perda de dados
-D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(305,14): warning C4244: 'inicializando': conversão de 'GLfloat' para 'int', possível perda de dados
-D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(318,15): warning C4305: '=': truncamento de 'double' para 'float'
-D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(338,14): warning C4305: '=': truncamento de 'double' para 'float'
-D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(339,14): warning C4305: '=': truncamento de 'double' para 'float'
-D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(696,11): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
-D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(697,11): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
-D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(701,16): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(702,16): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(703,10): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
-D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(704,10): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
-D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(706,26): warning C4305: 'inicializando': truncamento de 'double' para 'float'
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflita com uso de outras bibliotecas; use /NODEFAULTLIB:library
+D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(145,38): warning C4305: 'argumento': truncamento de 'double' para 'GLfloat'
+D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(287,26): warning C4244: '=': conversão de 'int' para 'GLfloat', possível perda de dados
+D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(291,14): warning C4244: 'inicializando': conversão de 'GLfloat' para 'int', possível perda de dados
+D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(304,15): warning C4305: '=': truncamento de 'double' para 'float'
+D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(324,14): warning C4305: '=': truncamento de 'double' para 'float'
+D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(325,14): warning C4305: '=': truncamento de 'double' para 'float'
+D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(682,11): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(683,11): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(687,16): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(688,16): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(689,10): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(690,10): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\HelloTriangle\Source.cpp(692,26): warning C4305: 'inicializando': truncamento de 'double' para 'float'
   HelloTriangle.vcxproj -> D:\Studying\Repositórios - GitHub\fund_comp-2022\VoxelEditor\Debug\Voxel Editor.exe
