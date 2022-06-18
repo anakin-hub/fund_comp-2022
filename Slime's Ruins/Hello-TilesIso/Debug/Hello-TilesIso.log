@@ -1,0 +1,9 @@
+﻿  SceneManager.cpp
+D:\Studying\Repositórios - GitHub\fund_comp-2022\HelloTilesIso\Hello-TilesIso\SceneManager.cpp(12,12): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
+D:\Studying\Repositórios - GitHub\fund_comp-2022\HelloTilesIso\Hello-TilesIso\SceneManager.cpp(309,12): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Repositórios - GitHub\fund_comp-2022\HelloTilesIso\Hello-TilesIso\SceneManager.cpp(310,12): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Repositórios - GitHub\fund_comp-2022\HelloTilesIso\Hello-TilesIso\SceneManager.cpp(318,10): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Repositórios - GitHub\fund_comp-2022\HelloTilesIso\Hello-TilesIso\SceneManager.cpp(319,10): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Repositórios - GitHub\fund_comp-2022\HelloTilesIso\Hello-TilesIso\SceneManager.cpp(329,12): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+D:\Studying\Repositórios - GitHub\fund_comp-2022\HelloTilesIso\Hello-TilesIso\SceneManager.cpp(330,12): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+  Hello-TilesIso.vcxproj -> D:\Studying\Repositórios - GitHub\fund_comp-2022\HelloTilesIso\Debug\Hello-TilesIso.exe
