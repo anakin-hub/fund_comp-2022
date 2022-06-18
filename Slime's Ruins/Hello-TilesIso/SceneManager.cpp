@@ -32,7 +32,7 @@ void SceneManager::initializeGraphics()
 	glfwInit();
 
 	// Create a GLFWwindow object that we can use for GLFW's functions
-	window = glfwCreateWindow(width, height, "Hello Transform", nullptr, nullptr);
+	window = glfwCreateWindow(width, height, "Slime's Ruins - Anakin, Brenda & Eduardo", nullptr, nullptr);
 	glfwMakeContextCurrent(window);
 
 	// Set the required callback functions
